@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/spring-context.xsd">
+
+	<bean class="com.wiley.springcore.Student" name="wileyStudent1">
+		<property name="studentId">
+			<value>137</value>
+		</property>
+		<property name="studentName">
+			<value>"Vandana"</value>
+		</property>
+		<property name="studentAddress">
+			<value>"Sanchi"</value>
+		</property>
+	</bean>
+	<bean class="com.wiley.springcore.Student" name="wileyStudent2">
+		<property name="studentId" value="138"></property>
+		<property name="studentName" value="Vivek"></property>
+		<property name="studentAddress" value="Vidisha"></property>
+	</bean>
+
+	<bean class="com.wiley.springcore.Student" name="wileyStudent3">
+		<property name="studentId" value="139"></property>
+		<property name="studentName" value="Harsh"></property>
+		<property name="studentAddress" value="Bhopal"></property>
+		<property name="courses">
+			<set>
+				<value>DSA</value>
+				<value>DBMS</value>
+				<value>AI</value>
+			</set>
+		</property>
+
+	</bean>
+
+	<bean class="com.wiley.springcore.Student" name="wileyStudent3">
+		<property name="studentId" value="139"></property>
+		<property name="studentName" value="Harsh"></property>
+		<property name="studentAddress" value="Bhopal"></property>
+		<property name="courses">
+			<props>
+				<prop key="name">Venkat</prop>
+				<prop key="workpat">Wiley Edge</prop>
+			</props>
+		</property>
+
+	</bean>
+
+</beans>
