@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd
+						http://www.springframework.org/schema/util
+		https://www.springframework.org/schema/util/spring-util.xsd">
+										
+
+	<context:annotation-config />
+	<util:list list-class="java.util.LinkedList" id="myfriend">
+		<value>Risika</value>
+		<value>adarsh</value>
+		<value>Ankit</value>
+	</util:list>
+	<!--<context:map map-class="java.util.HashMap" id=""></context:map>
+-->
+	<bean class="com.wiley.springcore.autowire.annotation.Employee"
+		name="emp">
+		<property name="phones">
+
+			<list>
+			<value>88776756</value>
+			<value>8000756</value>
+			</list>
+		</property>
+	</bean>
+
+
+	<bean class="com.wiley.springcore.autowire.annotation.Employee" name="emp1" />
+</beans>

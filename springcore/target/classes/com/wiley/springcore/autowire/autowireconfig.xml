@@ -4,10 +4,23 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:p="http://www.springframework.org/schema/p"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-						http://www.springframework.org/schema/context http://www.springframework.org/schema/spring-context.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		https://www.springframework.org/schema/context/spring-context.xsd">
+		
 
-	<bean class="com.wiley.springcore.autowire.Address" name="address2">
+	<context:annotation-config/>
+	
+	<bean class="com.wiley.springcore.autowire.Address" 
+	name="address">
+	<property name="city" value="benglur"/>
+	</bean>
+	
+
+	<bean class="com.wiley.springcore.autowire.Emp" name="emp1"  />
+</beans>
+<!--	<bean class="com.wiley.springcore.autowire.Address" name="address2">
 		<property name="street" value="XYZ"/>
 		<property name="city" value="Bangalore"/>
 	</bean>
@@ -15,7 +28,6 @@
 		<property name="street" value="Raisen"/>
 		<property name="city" value="Sanchi"/>
 	</bean>
-	<!--<bean class="com.wiley.springcore.autowire.Emp" name="emp1" autowire="byName" />-->
+	<bean class="com.wiley.springcore.autowire.Emp" name="emp1" autowire="byName" />
 	<bean class="com.wiley.springcore.autowire.Emp" name="emp1" autowire="constructor" />
-
-</beans>
+-->
